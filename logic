@@ -1,0 +1,11 @@
+# turn on/off lifex 
+function light(){
+	curl -X PUT "https://api.lifx.com/v1/lights/all/state" -H "Authorization: Bearer ACCESS-TOKEN-HERE" -d "power=$1"
+}
+export -f light
+
+# change the brightness of the light
+function lightb(){
+	curl -X PUT "https://api.lifx.com/v1/lights/all/state" -H "Authorization: Bearer ACCESS-TOKEN-HERE" -d "brightness=$1"
+}
+export -f lightb
